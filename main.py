@@ -62,9 +62,11 @@ while True:
 
     cv.imshow("Air Drawing", frame)
 
-    if cv.waitKey(1)==ord('q'):
+    key = cv.waitKey(1)
+
+    if key == ord('q'):
         break
-    elif cv.waitKey(1) == ord('c'):  # clear drawing
+    elif key == ord('c'):
         canvas = np.zeros_like(frame)
 cam.release()
 cv.destroyAllWindows()
